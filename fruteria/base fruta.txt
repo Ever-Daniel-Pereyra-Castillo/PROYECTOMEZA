@@ -1,0 +1,40 @@
+DATABASE fv
+
+CREATE TABLE productos (
+    id_producto INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(100) NOT NULL,
+    calorias INT(10) NOT NULL,
+    vitaminas VARCHAR(20) NOT NULL,
+    precio DECIMAL(10, 2) NOT NULL,
+    stock INT(10) NOT NULL,
+    imagen VARCHAR(255) NOT NULL,
+    tipo VARCHAR(20) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+
+CREATE TABLE log (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    ususario VARCHAR(100) NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+
+INSERT INTO productos (nombre, calorias, vitaminas, precio, stock, imagen, tipo) VALUES
+('Aguacate',160,"E,K,B",80.00,30000,"img/aguacate.jpg","fruta"),
+('Fresa',32,"C,K,B",100.00,20000,"img/fresa.jpg","fruta"),
+('Limon',29,"C,B",39.00,60000,"img/limon.jpg","fruta"),
+('Manzana',52,"C,K,B",45.50,50000,"img/manzana.jpg","fruta"),
+('Naranja',43,"C,A,B",30.50,20000,"img/naranja.jpg","fruta"),
+('Pina',50,"C,B",28.00,40000,"img/pina.jpg","fruta"),
+('Platano',89,"C,B",16.00,90000,"img/platano.jpg","fruta"),
+('Uva',67,"C,K,B",43.50,70000,"img/uva.jpg","fruta"),
+('Brocoli',34,"C,K,B",44.50,90000,"img/brocoli.jpg","verdura"),
+('Cebolla',32,"C,K,B",24.00,40000,"img/cebolla.jpg","verdura"),
+('Chile Serrano',32,"C,B",90.50,10000,"img/chile-serrano.jpg","verdura"),
+('Elote',98,"C,B,E",9.50,30000,"img/Elote.jpg","verdura"),
+('Jitomate',19,"C,A,K,B",36.00,20000,"img/jitomate.jpg","verdura"),
+('Nopal',16,"C,B,A,K",66.50,50000,"img/nopal.jpg","verdura"),
+('Pepino',16,"C,K,B",30.00,80000,"img/pepino.jpg","verdura"),
+('Zanahoria',41,"A,K,C,B",13.50,80000,"img/zanahoria.jpg","verdura");
